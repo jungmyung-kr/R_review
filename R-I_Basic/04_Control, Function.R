@@ -74,14 +74,26 @@ EMP <- c("2014홍길동220", "2020이순신300", "2010유관순260")
 # 숫자변환 함수 : as.numeric()함수
 # 평균함수 : mean()함수 
 
-emp_pay <- function(x) { # x =EMP
-  library(stringr) #패키지 in memory
+emp_pay <- function(x) { # x = EMP   
+  library(stringr) # 패키지 in memory 
   
-  # 내용 채우기
+  # 내용 채우기 
+  pay <- c() # 빈 벡터 : 각 사원 급여 저장 
+  
+  for(emp in x){ # 사원수 만큼 반복
+    # 접미어 $ 기호 이용 : 급여 추출 
+    pay <- c(pay, str_extract(emp, '[0-9]{3}$')) # pay='220','300','260'
+  }
+  # 문자형 -> 숫자형 변환 
+  pay <- as.numeric(pay) # pay=220,300,260
+  # 평균 계산 
+  pay_avg <- mean(pay )
+  # 전체 급여 평균 출력 
+  cat('전체 급여 평균 :', pay_avg)
 }
 
+# 함수 호출 
 emp_pay(EMP)
-
 
 ################################################################################
 
