@@ -11,11 +11,26 @@ data(Bug_Metrics_Software) # 데이터셋 로드
 
 # 단계1) 소프트웨어 발표 전 버그 수를 대상으로 각 소프트웨어별 버그를
 # beside형 세로막대 차트로 시각화하기(각 막대별 색상적용) 
-
+par(mfrow=c(1,2))
+barplot(Bug_Metrics_Software[,,1], beside = T, 
+        col = rainbow(5),
+        xlab = '소프트웨어', 
+        ylab='버그 수',
+        main='소프트웨어 발표전 버그수')
 
 # 단계2) 소프트웨어 발표 후 버그 수를 대상으로 각 소프트웨어별 버그를
 # 누적형 가로막대 차트로 시각화하기(각 막대별 색상적용) 
+barplot(Bug_Metrics_Software[,,2], beside = F, 
+        horiz = TRUE,
+        col = rainbow(5),
+        xlab = '소프트웨어', 
+        ylab='버그 수',
+        main='소프트웨어 발표후 버그수')
 
+# 범례 추가 
+legend(x=800, y=6, 
+       legend = row.names(Bug_Metrics_Software[,,2]),
+       fill = rainbow(5))
 
 ################################################################################
 
