@@ -37,20 +37,24 @@ legend(x=800, y=6,
 
 # 02. quakes 데이터 셋을 대상으로 다음 조건에 맞게 시각화 하시오.
 
-
 # 조건1) 1번 칼럼 : y축, 2번 컬럼 : x축 으로 산점도 시각화
-
 
 # 조건2) 5번 컬럼으로 색상 지정 : col = 
 
-
 # 조건3) "지진의 진앙지 산점도 차트" 제목 추가  : main = 
-
 
 # 조건4) "quakes.jpg" 파일명으로 차트 저장하기
 # 작업 경로 : "c:/itwill/3_Rwork/output"
 # 파일명 : quakes.jpg
-#픽셀 : 폭(720픽셀), 높이(480 픽셀)
+# 픽셀 : 폭(720픽셀), 높이(480 픽셀)
+
+data(quakes) # 데이터셋 로드  
+str(quakes)
+
+setwd("c:/itwill/3_Rwork/output") 
+jpeg("quakes.jpg", width=720, height=480) 
+plot(quakes$long, quakes$lat, col = quakes$stations)
+title(main="지진의 진앙지 산점도 차트")
 
 
 ################################################################################
