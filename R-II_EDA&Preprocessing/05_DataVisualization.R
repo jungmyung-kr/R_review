@@ -83,3 +83,22 @@ plot(iris3[,c(2,1),2])
 setwd("c:/itwill/3_Rwork/data")
 noodle = read.csv(file="noodle.csv")
 
+str(noodle)
+
+plot(noodle$year, noodle$price, type = 'o', 
+     ylim = c(0, 500), ann = FALSE, col = 'blue')
+par(new = T)
+plot(noodle$year, noodle$noodle, type = 'o', 
+     ann = FALSE, axes = FALSE, col = 'red')
+
+# 제목 & 축 이름 추가
+title(main = "물가와 라면값 증가율 비교")
+title(xlab = "년도", col.lab='blue')
+title(ylab = "증가율", col.lab='red')
+# 범례 추가 
+legend(x = 1980, y = 450, legend = c("물가", "라면"),
+       lty = 1, col = c('blue', 'red'))
+
+
+
+
