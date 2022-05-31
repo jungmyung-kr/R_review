@@ -60,6 +60,10 @@ boxplot(mtcars_df$qsec)
 
 # 03. 본문에서 생성된 dataset2의 resident 칼럼을 대상으로 NA 값을 제거한 후 dataset3 변수에 저장하시오.
 
+dim(dataset2) # 248 12
+dataset3 <- subset(dataset2, !is.na(resident)) 
+dim(dataset3) # 231 12
+
 
 ################################################################################
 
