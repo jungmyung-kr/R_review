@@ -71,6 +71,9 @@ dim(dataset3) # 231 12
 # 04. 본문에서 생성된 dataset2의 직급(position) 칼럼을 대상으로 1급 -> 5급, 5급 -> 1급 형식으로
 # 역코딩하여 position2 칼럼에 추가하시오.
 
+position <- dataset2$position
+dataset2$position2<- 6-position
+head(dataset2)
 
 ################################################################################
 
