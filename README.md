@@ -12,6 +12,8 @@
 * DataIO, String : 자료 입출력과 문자열 처리
 * Control, Function : 제어문과 함수
 
+***
+
 ##### PART-II. EDA & Preprocessing : 탐색적 데이터 분석과 전처리
 * Data Visualization : 데이터 시각화
 * Data Handling, EDA Preprocessing : 데이터 조작, 전처리
