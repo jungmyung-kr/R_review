@@ -6,7 +6,7 @@
 
 ***
 
-##### PART-I. Basic : 기초 문법 
+##### PART-I. Basic : 기초 문법  
 * Basic : 기초 
 * Data Structure : 자료 구조 
 * DataIO, String : 자료 입출력과 문자열 처리
