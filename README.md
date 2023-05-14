@@ -22,7 +22,7 @@
 ##### PART-III. Inferential Statistics : 추론 통계
 * Descriptive Statistics : 기술 통계 분석
 * CrossTableChi-squared : 교차 분석 (카이제곱검정)
-* Parameter Test : 모수 유의성 검정 
+* Parameter Test : 모수 유의성 검정
 * Correlation Analysis : 상관 분석
 * Eigen Value, PCA : 주성분 분석
 
